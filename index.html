@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechHistory — Полная Энциклопедия Гаджетов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="burger-btn" id="burgerBtn">
+            <span></span><span></span><span></span>
+        </div>
+        <div class="logo" id="logoBtn">TechHistory</div>
+        <nav class="desktop-menu">
+            <a href="#" class="nav-menu-link" data-page="main-page">Главная</a>
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle">Всё про бренд ▾</a>
+                <div class="dropdown-content">
+                    <a href="#" class="nav-menu-link" data-page="laptops-page">Ноутбуки (Mac/Galaxy/Redmi)</a>
+                    <a href="#" class="nav-menu-link" data-page="tablets-page">Планшеты (iPad/Tab)</a>
+                    <a href="#" class="nav-menu-link" data-page="ecosystem-page">Экосистема и ИИ</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="closeBtn">&times;</div>
+        <div class="sidebar-links">
+            <a href="#" class="nav-menu-link" data-page="main-page">🏠 Главная</a>
+            <hr>
+            <span class="sidebar-section-title">Смартфоны</span>
+            <a href="#" class="nav-menu-link" data-page="apple-page">Apple iPhone (Все модели)</a>
+            <a href="#" class="nav-menu-link" data-page="samsung-page">Samsung Galaxy</a>
+            <a href="#" class="nav-menu-link" data-page="google-page">Google Pixel (Все модели)</a>
+            <a href="#" class="nav-menu-link" data-page="motorola-page">Motorola</a>
+            <a href="#" class="nav-menu-link" data-page="xiaomi-page">Xiaomi</a>
+            <a href="#" class="nav-menu-link" data-page="nothing-page">Nothing & CMF</a>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main class="main-content">
+
+        <section id="main-page" class="page-content active">
+            <div class="hero">
+                <h1>История Мобильной Революции</h1>
+                <p>От кирпича Motorola до титанового iPhone 17. Мы собрали всё здесь.</p>
+            </div>
+            <div class="history-intro">
+                <h2>Как всё начиналось?</h2>
+                <p>Мир связи изменился в 1973 году, когда Мартин Купер совершил первый звонок. Но настоящий взрыв произошел в 2007-м. Ниже — подробная история каждого игрока, который изменил твою жизнь.</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-card apple-border">
+                    <h3>Apple</h3>
+                    <p>Полный разбор от iPhone 2G до iPhone 17. Как менялся мир.</p>
+                    <button class="btn read-more-btn" data-page="apple-page">Смотреть все модели</button>
+                </div>
+                <div class="brand-card google-border">
+                    <h3>Google Pixel</h3>
+                    <p>История всех поколений: от Nexus до Pixel 9 Pro с ИИ.</p>
+                    <button class="btn read-more-btn" data-page="google-page">Смотреть все модели</button>
+                </div>
+                <div class="brand-card samsung-border">
+                    <h3>Samsung</h3>
+                    <p>Путь Galaxy S, взрывы Note 7 и триумф складных Fold.</p>
+                    <button class="btn read-more-btn" data-page="samsung-page">Читать историю</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="apple-page" class="page-content">
+            <h2>Apple iPhone: Генеалогия легенд</h2>
+            <div class="info-block">
+                <h3>Ранняя эпоха (2007-2012)</h3>
+                <p><strong>iPhone 2G, 3G, 3GS:</strong> Первый телефон без стилуса, появление App Store и первый быстрый интернет.</p>
+                <p><strong>iPhone 4 / 4S:</strong> Стеклянный сэндвич, экран Retina и рождение Siri. Дизайн 4-ки до сих пор считают лучшим.</p>
+                <p><strong>iPhone 5 / 5S / 5C:</strong> Увеличенный экран, первый Touch ID и эксперимент с дешевым пластиком в 5C.</p>
+                
+                <h3>Эпоха роста (2014-2016)</h3>
+                <p><strong>iPhone 6 / 6 Plus:</strong> Apple признала, что большие экраны — это круто. Начало эры "лопат".</p>
+                <p><strong>iPhone 6S / SE (1-gen):</strong> 3D Touch (нажатие с силой) и возвращение компактности в корпусе 5S.</p>
+                <p><strong>iPhone 7 / 7 Plus:</strong> Смерть разъема 3.5мм, сенсорная кнопка Home и первая двойная камера с портретным режимом.</p>
+
+                <h3>Безрамочная революция (2017-2021)</h3>
+                <p><strong>iPhone 8 / 8 Plus / iPhone X:</strong> Последний классический дизайн и революционный "X" с Face ID и OLED.</p>
+                <p><strong>iPhone XR / XS / XS Max:</strong> Появление легендарного XR (хит продаж на 3 года вперед).</p>
+                <p><strong>iPhone 11 Серия:</strong> Ночной режим съемки и возвращение ярких цветов.</p>
+                <p><strong>iPhone 12 / 13 Серии:</strong> Возврат к острым граням, внедрение MagSafe и 120 Гц в Pro-версиях.</p>
+
+                <h3>Современность и Будущее (2022-2026)</h3>
+                <p><strong>iPhone 14 / 15 / 16:</strong> Появление Dynamic Island, титановый корпус, кнопка Action и переход на USB-C.</p>
+                <p><strong>iPhone 17 (Анонсы):</strong> Ожидаемый iPhone 17 Air — ультратонкий корпус и новая архитектура фронтальных камер.</p>
+            </div>
+        </section>
+
+        <section id="google-page" class="page-content">
+            <h2>Google Pixel: Путь Искусственного Интеллекта</h2>
+            <div class="info-block">
+                <h3>Эра становления</h3>
+                <p><strong>Pixel 1 & 2 (2016-2017):</strong> Google показала, что софт важнее железа. Камера Pixel 2 "разрывала" всех конкурентов за счет HDR+.</p>
+                <p><strong>Pixel 3 / 3 XL:</strong> Лучшая фронталка и режим Night Sight (ночная съемка стала реальностью).</p>
+                <p><strong>Pixel 4 / 4 XL:</strong> Эксперимент с радаром Motion Sense (управление жестами) и 90 Гц.</p>
+
+                <h3>Переходный период</h3>
+                <p><strong>Pixel 5:</strong> Компактный, с обратной беспроводной зарядкой, но на среднем процессоре.</p>
+                <p><strong>Pixel 6 / 6 Pro:</strong> Первый чип Google Tensor. Уникальный дизайн "Visor" и 50 Мп сенсоры.</p>
+
+                <h3>Золотой стандарт</h3>
+                <p><strong>Pixel 7 / 8 / 9:</strong> Доведение дизайна до идеала. Функции "Волшебный ластик", исправление размытых фото и полноценный Gemini AI внутри системы.</p>
+                <p><strong>Pixel Fold:</strong> Первый складной Pixel с уникальными пропорциями паспорта.</p>
+            </div>
+        </section>
+
+        <section id="samsung-page" class="page-content">
+            <h2>Samsung Galaxy: Технологический титан</h2>
+            <div class="info-block">
+                <h3>Ключевые этапы</h3>
+                <p><strong>Galaxy S / S2 / S3:</strong> Битва с Apple, пластиковые корпуса, но лучшие AMOLED экраны.</p>
+                <p><strong>Galaxy S6 Edge:</strong> Первый в мире экран, загнутый по краям.</p>
+                <p><strong>Galaxy Note 7:</strong> Трагедия со взрывами батарей, которая чуть не погубила бренд, но сделала контроль качества лучшим в мире.</p>
+                <p><strong>S24 / S25 Ultra:</strong> Титан, встроенный стилус S-Pen, 100-кратный зум и перевод звонков на лету.</p>
+                <p><strong>Fold & Flip:</strong> Лидерство в гибких смартфонах (уже 7-е поколение).</p>
+            </div>
+        </section>
+
+        <section id="nothing-page" class="page-content">
+            <h2>Nothing: Прозрачная эстетика</h2>
+            <div class="info-block">
+                <p><strong>Nothing Phone (1):</strong> Первый хайп. Прозрачная крышка, 900светодиодов (Glyphs) и чистый Android.</p>
+                <p><strong>Nothing Phone (2):</strong> Флагманское железо, более плавные глифы и доработанный софт Nothing OS.</p>
+                <p><strong>Nothing Phone (2a):</strong> Бюджетный хит с необычным дизайном "глаза".</p>
+                <h3>Суббренд CMF</h3>
+                <p><strong>CMF Phone (1):</strong> Революция кастомизации. Сменные задние крышки на винтах, возможность прикрутить подставку или ремешок прямо к корпусу.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
