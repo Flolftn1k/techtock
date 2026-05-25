@@ -22,15 +22,11 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo(0,0);
     }
 
-    document.querySelectorAll('.nav-menu-link').forEach(link => {
-        link.addEventListener('click', (e) => {
+    document.querySelectorAll('.nav-menu-link, .read-more-btn').forEach(el => {
+        el.addEventListener('click', (e) => {
             e.preventDefault();
-            goToPage(link.dataset.page);
+            goToPage(el.dataset.page);
         });
-    });
-
-    document.querySelectorAll('.read-more-btn').forEach(btn => {
-        btn.addEventListener('click', () => goToPage(btn.dataset.page));
     });
 
     document.getElementById('logoBtn').addEventListener('click', () => goToPage('main-page'));
