@@ -1,33 +1,248 @@
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-body { background-color: #0d1117; color: #c9d1d9; }
+/* Глобальные настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+}
 
-.navbar { display: flex; align-items: center; justify-content: space-between; background: #161b22; padding: 15px 5%; position: fixed; width: 100%; top: 0; z-index: 100; border-bottom: 1px solid #30363d; }
-.logo { font-size: 24px; font-weight: bold; color: #58a6ff; cursor: pointer; }
+body {
+    background-color: #0d1117;
+    color: #c9d1d9;
+    display: flex;
+    min-height: 100vh;
+}
 
-.sidebar { position: fixed; top: 0; left: -320px; width: 300px; height: 100%; background: #161b22; z-index: 200; transition: 0.3s; padding: 20px; }
-.sidebar.active { left: 0; }
-.sidebar-links a { display: block; color: #8b949e; text-decoration: none; margin: 15px 0; font-size: 18px; transition: 0.2s; }
-.sidebar-links a:hover { color: #58a6ff; padding-left: 5px; }
+/* Стилизация фиксированного бокового меню */
+.sidebar {
+    width: 260px;
+    background-color: #161b22;
+    border-right: 1px solid #30363d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
 
-.overlay { position: fixed; display: none; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 150; }
-.overlay.active { display: block; }
+.sidebar-logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #58a6ff;
+    cursor: pointer;
+    margin-bottom: 35px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+}
 
-.main-content { margin-top: 80px; padding: 40px 5%; max-width: 1000px; margin-left: auto; margin-right: auto; }
-.page-content { display: none; }
-.page-content.active { display: block; animation: fadeIn 0.4s ease; }
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
-@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.nav-divider {
+    border: 0;
+    border-top: 1px solid #30363d;
+    margin: 15px 0;
+}
 
-.hero { text-align: center; padding: 40px; background: #1f242c; border-radius: 15px; margin-bottom: 30px; border: 1px solid #30363d; }
-.info-block { background: #161b22; padding: 25px; border-radius: 12px; border: 1px solid #30363d; margin-top: 20px; }
-.info-block h3 { color: #58a6ff; margin: 20px 0 10px; }
-.best-choice { background: #21262d; padding: 15px; border-radius: 8px; margin-top: 20px; border: 1px dashed #58a6ff; color: #fff; }
+.nav-section-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #484f58;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
 
-.brands-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-.brand-card { background: #161b22; padding: 20px; border-radius: 10px; border: 1px solid #30363d; text-align: center; transition: 0.3s; }
-.brand-card:hover { transform: translateY(-5px); border-color: #58a6ff; }
+.nav-link {
+    color: #8b949e;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
 
-.btn { width: 100%; padding: 8px; background: #21262d; color: #fff; border: 1px solid #30363d; border-radius: 5px; cursor: pointer; margin-top: 10px; }
-.btn:hover { background: #30363d; }
+.nav-link:hover {
+    background-color: #21262d;
+    color: #ffffff;
+}
 
-.vivo-border:hover { border-color: #415fff; }
+.nav-link.active {
+    background-color: #1f6feb;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Стилизация основного контента */
+.main-content {
+    margin-left: 260px;
+    padding: 50px;
+    width: calc(100% - 260px);
+    max-width: 1200px;
+}
+
+/* Логика отображения страниц */
+.page-content {
+    display: none;
+}
+
+.page-content.active {
+    display: block;
+    animation: slideUp 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Главная страница UI */
+.hero-block {
+    background: linear-gradient(135deg, #1f242c 0%, #161b22 100%);
+    border: 1px solid #30363d;
+    padding: 50px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.hero-block h1 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.hero-block p {
+    color: #8b949e;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.section-title {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+/* Сетка брендов и карточки */
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.brand-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    padding: 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 170px;
+    transition: all 0.25s ease;
+}
+
+.brand-card h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.brand-card p {
+    color: #8b949e;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.card-action {
+    font-size: 13px;
+    font-weight: 600;
+    color: #58a6ff;
+}
+
+/* Разнообразие цветов рамок при наведении */
+.brand-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.card-apple:hover { border-color: #ffffff; }
+.card-samsung:hover { border-color: #1f6feb; }
+.card-google:hover { border-color: #ea4335; }
+.card-motorola:hover { border-color: #00bcd4; }
+.card-xiaomi:hover { border-color: #ff6700; }
+.card-nothing:hover { border-color: #7a7a7a; }
+.card-vivo:hover { border-color: #415fff; }
+
+/* Страницы брендов */
+.brand-header {
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    border: 1px solid #30363d;
+}
+
+.brand-header h2 { color: #fff; font-size: 28px; margin-bottom: 8px; }
+.brand-header p { color: #8b949e; font-size: 15px; }
+
+/* Кастомные фоны для шапок */
+.apple-style { background: linear-gradient(90deg, #21262d 0%, #161b22 100%); }
+.samsung-style { background: linear-gradient(90deg, #1428a022 0%, #161b22 100%); border-left: 4px solid #1428a0; }
+.google-style { background: linear-gradient(90deg, #ea433511 0%, #161b22 100%); border-left: 4px solid #ea4335; }
+.motorola-style { background: linear-gradient(90deg, #00bcd411 0%, #161b22 100%); border-left: 4px solid #00bcd4; }
+.xiaomi-style { background: linear-gradient(90deg, #ff670011 0%, #161b22 100%); border-left: 4px solid #ff6700; }
+.nothing-style { background: linear-gradient(90deg, #30363d 0%, #161b22 100%); }
+.vivo-style { background: linear-gradient(90deg, #415fff11 0%, #161b22 100%); border-left: 4px solid #415fff; }
+
+/* Таймлайн списков моделей */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.timeline-item {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.timeline-item h4 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    color: #8b949e;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.timeline-item strong {
+    color: #58a6ff;
+}
+
+/* Выделение лучших решений / будущего */
+.main-highlight {
+    border: 1px dashed #58a6ff;
+    background-color: #1c212c;
+}

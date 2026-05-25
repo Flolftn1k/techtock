@@ -1,33 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const burgerBtn = document.getElementById('burgerBtn');
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-    const closeBtn = document.getElementById('closeBtn');
 
-    function toggleMenu() {
-        sidebar.classList.toggle('active');
-        overlay.classList.toggle('active');
+    // Сбор всех навигационных ссылок и страниц
+    const navLinks = document.querySelectorAll('.nav-link');
+    const brandCards = document.querySelectorAll('.brand-card');
+    const pageSections = document.querySelectorAll('.page-content');
+    const logoButton = document.querySelector('.sidebar-logo');
+
+    // Функция переключения вкладок
+    function navigateToPage(targetPageId) {
+        // Убираем активный класс у всех страниц
+        pageSections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Показываем целевую страницу
+        const targetSection = document.getElementById(targetPageId);
+        if (targetSection) {
+            targetSection.classList.add('active');
+        }
+
+        // Обновляем активный статус в боковом меню
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-page') === targetPageId) {
+                link.classList.add('active');
+            }
+        });
+
+        // Скроллим окно в самый верх
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    burgerBtn.addEventListener('click', toggleMenu);
-    closeBtn.addEventListener('click', toggleMenu);
-    overlay.addEventListener('click', toggleMenu);
-
-    function goToPage(id) {
-        document.querySelectorAll('.page-content').forEach(p => p.classList.remove('active'));
-        const target = document.getElementById(id);
-        if(target) target.classList.add('active');
-        sidebar.classList.remove('active');
-        overlay.classList.remove('active');
-        window.scrollTo(0,0);
-    }
-
-    document.querySelectorAll('.nav-menu-link, .read-more-btn').forEach(el => {
-        el.addEventListener('click', (e) => {
-            e.preventDefault();
-            goToPage(el.dataset.page);
+    // Слушатель для ссылок в сайдбаре
+    navLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const pageId = link.getAttribute('data-page');
+            navigateToPage(pageId);
         });
     });
 
-    document.getElementById('logoBtn').addEventListener('click', () => goToPage('main-page'));
+    // Слушатель для карточек на главной странице
+    brandCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const pageId = card.getAttribute('data-page');
+            navigateToPage(pageId);
+        });
+    });
+
+    // Клик по логотипу возвращает на главную
+    if (logoButton) {
+        logoButton.addEventListener('click', () => {
+            navigateToPage('main-page');
+        });
+    }
 });

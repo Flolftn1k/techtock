@@ -3,148 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechHistory — Полная Энциклопедия Гаджетов</title>
+    <title>TechHistory — Полная Энциклопедия Мобильной Эволюции</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="burger-btn" id="burgerBtn">
-            <span></span><span></span><span></span>
-        </div>
-        <div class="logo" id="logoBtn">TechHistory</div>
-        <nav class="desktop-menu">
-            <a href="#" class="nav-menu-link" data-page="main-page">Главная</a>
-            <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Разделы ▾</a>
-                <div class="dropdown-content">
-                    <a href="#" class="nav-menu-link" data-page="laptops-page">Ноутбуки</a>
-                    <a href="#" class="nav-menu-link" data-page="tablets-page">Планшеты</a>
-                    <a href="#" class="nav-menu-link" data-page="ecosystem-page">Экосистема</a>
-                </div>
-            </div>
+    <!-- Закрепленный Sidebar слева -->
+    <aside class="sidebar">
+        <div class="sidebar-logo" data-page="main-page">TechHistory</div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-link active" data-page="main-page">🏠 Главная страница</a>
+            <hr class="nav-divider">
+            <span class="nav-section-title">Каталог брендов</span>
+            <a href="#" class="nav-link" data-page="apple-page">🍏 Apple iPhone</a>
+            <a href="#" class="nav-link" data-page="samsung-page">📱 Samsung Galaxy</a>
+            <a href="#" class="nav-link" data-page="google-page">🤖 Google Pixel</a>
+            <a href="#" class="nav-link" data-page="motorola-page">📟 Motorola</a>
+            <a href="#" class="nav-link" data-page="xiaomi-page">🇨🇳 Xiaomi & Redmi</a>
+            <a href="#" class="nav-link" data-page="nothing-page">✨ Nothing & CMF</a>
+            <a href="#" class="nav-link" data-page="vivo-page">📸 Vivo & ZEISS</a>
         </nav>
-    </header>
+    </aside>
 
-    <div class="sidebar" id="sidebar">
-        <div class="close-btn" id="closeBtn">&times;</div>
-        <div class="sidebar-links">
-            <a href="#" class="nav-menu-link" data-page="main-page">🏠 Главная</a>
-            <hr>
-            <a href="#" class="nav-menu-link" data-page="apple-page">Apple iPhone</a>
-            <a href="#" class="nav-menu-link" data-page="samsung-page">Samsung Galaxy</a>
-            <a href="#" class="nav-menu-link" data-page="google-page">Google Pixel</a>
-            <a href="#" class="nav-menu-link" data-page="motorola-page">Motorola</a>
-            <a href="#" class="nav-menu-link" data-page="xiaomi-page">Xiaomi</a>
-            <a href="#" class="nav-menu-link" data-page="nothing-page">Nothing & CMF</a>
-            <a href="#" class="nav-menu-link" data-page="vivo-page">Vivo</a>
-        </div>
-    </div>
-
-    <div class="overlay" id="overlay"></div>
-
+    <!-- Основной блок контента -->
     <main class="main-content">
 
+        <!-- ГЛАВНАЯ СТРАНИЦА -->
         <section id="main-page" class="page-content active">
-            <div class="hero">
-                <h1>История Мобильной Революции</h1>
-                <p>Самый полный гид по устройствам, которые изменили мир.</p>
+            <div class="hero-block">
+                <h1>Музей Мобильных Технологий</h1>
+                <p>Глубокий разбор эволюции сотовой связи: от килограммовых трубок до титановых флагманов с искусственным интеллектом.</p>
             </div>
+
+            <h2 class="section-title">Быстрый переход к истории</h2>
             <div class="brands-grid">
-                <div class="brand-card apple-border">
+                <div class="brand-card card-apple" data-page="apple-page">
                     <h3>Apple</h3>
-                    <button class="btn read-more-btn" data-page="apple-page">Читать историю</button>
+                    <p>Абсолютно все поколения: от iPhone 2G до футуристичного iPhone 17.</p>
+                    <span class="card-action">Изучить →</span>
                 </div>
-                <div class="brand-card samsung-border">
+                <div class="brand-card card-samsung" data-page="samsung-page">
                     <h3>Samsung</h3>
-                    <button class="btn read-more-btn" data-page="samsung-page">Читать историю</button>
+                    <p>Ключевые инновации: от пластика S1 до гибких Fold и ультимативных Ultra.</p>
+                    <span class="card-action">Изучить →</span>
                 </div>
-                <div class="brand-card google-border">
+                <div class="brand-card card-google" data-page="google-page">
                     <h3>Google Pixel</h3>
-                    <button class="btn read-more-btn" data-page="google-page">Читать историю</button>
+                    <p>Магия чистой системы и вычислительной фотографии алгоритмов HDR+.</p>
+                    <span class="card-action">Изучить →</span>
                 </div>
-                <div class="brand-card motorola-border">
+                <div class="brand-card card-motorola" data-page="motorola-page">
                     <h3>Motorola</h3>
-                    <button class="btn read-more-btn" data-page="motorola-page">Читать историю</button>
+                    <p>Первые в мире во всем: от сотовой связи до легендарного культа RAZR V3.</p>
+                    <span class="card-action">Изучить →</span>
                 </div>
-                <div class="brand-card xiaomi-border">
+                <div class="brand-card card-xiaomi" data-page="xiaomi-page">
                     <h3>Xiaomi</h3>
-                    <button class="btn read-more-btn" data-page="xiaomi-page">Читать историю</button>
+                    <p>Как прошивка MIUI превратилась в HyperOS и захватила народные бюджеты.</p>
+                    <span class="card-action">Изучить →</span>
                 </div>
-                <div class="brand-card nothing-border">
+                <div class="brand-card card-nothing" data-page="nothing-page">
                     <h3>Nothing</h3>
-                    <button class="btn read-more-btn" data-page="nothing-page">Читать историю</button>
+                    <p>Эстетика прозрачности, интерфейс глифов и модульные конструкторы CMF.</p>
+                    <span class="card-action">Изучить →</span>
                 </div>
-                <div class="brand-card vivo-border">
+                <div class="brand-card card-vivo" data-page="vivo-page">
                     <h3>Vivo</h3>
-                    <button class="btn read-more-btn" data-page="vivo-page">Читать историю</button>
+                    <p>Скрытый лидер китайских инноваций и бескомпромиссная оптика ZEISS.</p>
+                    <span class="card-action">Изучить →</span>
                 </div>
             </div>
         </section>
 
+        <!-- APPLE IPHONE (ВСЕ МОДЕЛИ) -->
         <section id="apple-page" class="page-content">
-            <h2>Apple iPhone: От 2G до 17 Pro</h2>
-            <div class="info-block"><h3>Золотой фонд Apple</h3>
-                <p><strong>Эпоха классики:</strong> iPhone 2G (2007) убил стилусы. iPhone 4 ввел Retina-дисплей. iPhone 5S подарил нам Touch ID.</p>
-                <p><strong>Эпоха перемен:</strong> iPhone 7 убрал джек, iPhone X убрал кнопку «Домой». iPhone 11 стал хитом благодаря балансу цены.</p>
-                <p><strong>Современность:</strong> iPhone 13 Pro ввел 120 Гц. iPhone 15 Pro перешел на титан и USB-C. Ждем iPhone 17 с ультратонким корпусом Slim.</p>
-                <div class="best-choice">⭐ <strong>Лучший выбор:</strong> iPhone 13 (база) или 15 Pro (технологии).</div>
+            <div class="brand-header apple-style">
+                <h2>Apple iPhone: Полная Генеалогия</h2>
+                <p>История устройств, которые научили мир управлять интерфейсом с помощью пальцев.</p>
             </div>
+
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h4>iPhone 2G, 3G, 3GS (2007–2009)</h4>
+                    <p><strong>2G:</strong> Алюминий, отсутствие буфера обмена и App Store, но революционный емкостный экран. <strong>3G/3GS:</strong> Переход на пластик, появление магазина приложений и полноценного GPS.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>iPhone 4, 4S (2010–2011)</h4>
+                    <p>Стальной сэндвич и стекло. Экран Retina стер пиксели из поля зрения. В 4S дебютировала Siri и двухъядерный чип A5.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>iPhone 5, 5C, 5S (2012–2013)</h4>
+                    <p>Переход на экран 4 дюйма и разъем Lightning. В 5S мир впервые увидел 64-битный процессор A7 и сканер Touch ID.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>iPhone 6, 6 Plus, 6S, 6S Plus, SE 1 (2014–2016)</h4>
+                    <p>Эра больших экранов (4.7 и 5.5 дюймов). 6S принес прочный алюминий 7000-й серии и распознавание силы нажатия 3D Touch.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>iPhone 7, 7 Plus, 8, 8 Plus (2016–2017)</h4>
+                    <p>Убийство разъема 3.5 мм, защита от воды IP67 и появление оптического зума в 7 Plus. 8-ка вернула стекло для беспроводной зарядки.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>iPhone X, XR, XS, XS Max (2017–2018)</h4>
+                    <p>Смерть кнопки Home. Безрамочный OLED-экран, вырез-"челка" и сканер лица Face ID. XR стал суперхитом за счет автономности.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>iPhone 11, 11 Pro, 11 Pro Max (2019)</h4>
+                    <p>Широкоугольные камеры во всей линейке и появление ночного режима съемки. Матовое заднее стекло в Pro-версиях.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>iPhone 12, 13, 14 Серии + SE 2/3 (2020–2022)</h4>
+                    <p>Возврат к плоским граням в стиле iPhone 4, внедрение магнитов MagSafe и сетей 5G. В 13 Pro завезли 120 Гц ProMotion, а в 14 Pro — Dynamic Island.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>iPhone 15, 16 Серии (2023–2024)</h4>
+                    <p>Переход всей линейки на USB-C, титановые рамки в Pro, появление настраиваемой кнопки Action и выделенной сенсорной клавиши Camera Control.</p>
+                </div>
+               <div class="timeline-item main-highlight">
+    <h4>iPhone 17 и 17 Air / Slim (2025–2026)</h4>
+    <p>Настоящая революция в дизайне. Apple представила <strong>iPhone 17 Air</strong> — самый тонкий смартфон в своей истории, который заменил линейку Plus. Вся серия получила фронтальные камеры на 24 Мп и долгожданные 120 Гц (ProMotion) даже в базовых моделях. Это поколение окончательно закрепило доминирование Apple Intelligence в повседневных задачах.</p>
+    <div class="main-highlight" style="margin-top: 20px; padding: 15px; border-left: 4px solid #fff;">
+    <h4>🍎 Выбор Apple на май 2026:</h4>
+    <ul>
+        <li><strong>Ультимативный:</strong> iPhone 17 Pro Max (лучшая камера и экран).</li>
+        <li><strong>Золотая середина:</strong> iPhone 17 Pro (баланс мощности и размера).</li>
+        <li><strong>Народный выбор:</strong> iPhone 15 / 16 (сейчас стоят вменяемых денег, а работают всё так же быстро).</li>
+    </ul>
+</div>
         </section>
 
+        <!-- SAMSUNG GALAXY (КЛЮЧЕВЫЕ) -->
         <section id="samsung-page" class="page-content">
-            <h2>Samsung: Империя дисплеев</h2>
-            <div class="info-block">
-                <h3>От копирования к лидерству</h3>
-                <p><strong>Первые шаги:</strong> Galaxy S1 и S2 показали, что AMOLED — это будущее. S3 «для людей» стал самым продаваемым Android-смартфоном своего времени.</p>
-                <p><strong>Инновации и провалы:</strong> Экран Edge в S6 изменил дизайн индустрии. Трагедия Note 7 (взрывы батарей) заставила Samsung пересмотреть безопасность, сделав их одними из самых надежных сегодня.</p>
-                <p><strong>Эпоха Ultra:</strong> S21, S23 и S24 Ultra вернули дух Note, добавив 100-кратный зум и мощнейший ИИ Galaxy AI.</p>
-                <div class="best-choice">⭐ <strong>Лучший выбор:</strong> Galaxy S24 Ultra или складной Flip 6.</div>
+            <div class="brand-header samsung-style">
+                <h2>Samsung Galaxy: Технологический Фронтир</h2>
+                <p>Путь корейского гиганта от пластиковых копий до создания трендов на огромные и гибкие экраны.</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h4>Эра становления: Galaxy S1, S2, S3 (2010–2012)</h4>
+                    <p>Доказали, что матрицы Super AMOLED выдают самый сочный черный цвет. Культовый Galaxy S3 разошелся миллионными тиражами благодаря "природному" дизайну.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Galaxy Note Серия (2011–2020)</h4>
+                    <p>Смартфоны, над которыми сначала смеялись из-за размеров, а потом начали копировать. Перо S-Pen создало отдельный класс устройств для продуктивности.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Galaxy Note 7 (2016)</h4>
+                    <p>Исторический кризис со взрывами аккумуляторов из-за дефекта конструкции. Samsung отозвала всю партию, понесла миллиардные убытки, но внедрила жесткий 8-этапный контроль качества.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Galaxy S6 Edge & S8 (Эра изогнутых стекол)</h4>
+                    <p>S6 Edge шокировал рынок экраном, загнутым на боковые грани. S8 уничтожил массивные рамки сверху и снизу, представив концепцию Infinity Display.</p>
+                </div>
+                <div class="timeline-item main-highlight">
+                    <h4>Современные ультимативные Ultra и Fold / Flip</h4>
+                    <p>Модели S23 Ultra и S24 Ultra объединили в себе лучшие камеры со 100x зумом, встроенный стилус и нейросети Galaxy AI. Параллельно линейки Z Fold и Z Flip удерживают лидерство на рынке складных матриц.</p>
+                    <div class="main-highlight" style="margin-top: 20px; padding: 15px; border-left: 4px solid #1f6feb;">
+    <h4>📱 Выбор Samsung на май 2026:</h4>
+    <ul>
+        <li><strong>Ультимативный:</strong> S26 Ultra (всё и сразу).</li>
+        <li><strong>Золотая середина:</strong> S26+ (большой экран без переплаты за камеру Ultra).</li>
+        <li><strong>Народный выбор:</strong> Galaxy S24 / S25 FE (самые доступные входные билеты в экосистему).</li>
+    </ul>
+</div>
+                </div>
             </div>
         </section>
 
+        <!-- GOOGLE PIXEL -->
+        <section id="google-page" class="page-content">
+            <div class="brand-header google-style">
+                <h2>Google Pixel: Чистый Код и Алгоритмы</h2>
+                <p>Как поисковый гигант доказал, что одна камера со сложным софтом снимает лучше, чем четыре сенсора без оптимизации.</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h4>Предыстория: Линейка Google Nexus (2010–2015)</h4>
+                    <p>Устройства, создававшиеся сторонними фирмами (HTC, LG, Huawei) под кураторством Google. Главная цель — дать разработчикам эталонный чистый Android по низкой цене.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Pixel 1, 2, 3 (2016–2018)</h4>
+                    <p>Старт собственного бренда. Pixel 2 XL стал культовым: благодаря режиму HDR+ он в одиночку создавал портретные фото с размытием фона лучше, чем конкуренты с двойными камерами.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Pixel 6, 7, 8, 9 (Эра процессоров Tensor)</h4>
+                    <p>Google отказалась от Snapdragon и разработала свои чипы Tensor, заточенные под машинное обучение. Визитная карточка — уникальный блок камер в виде полосы (Visor) и встроенный ИИ Gemini.</p>
+                    <div class="main-highlight" style="margin-top: 20px; padding: 15px; border-left: 4px solid #ea4335;">
+    <h4>🤖 Выбор Google на май 2026:</h4>
+    <ul>
+        <li><strong>Ультимативный:</strong> Pixel 10 Pro XL.</li>
+        <li><strong>Золотая середина:</strong> Pixel 10.</li>
+        <li><strong>Народный выбор:</strong> Pixel 9a (лучший ИИ-смартфон за свои деньги).</li>
+    </ul>
+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MOTOROLA -->
         <section id="motorola-page" class="page-content">
-            <h2>Motorola: Родоначальники связи</h2>
-            <div class="info-block">
-                <h3>Великое прошлое</h3>
-                <p><strong>DynaTAC 8000X (1983):</strong> Первый в мире коммерческий сотовый телефон. Настоящий «кирпич».</p>
-                <p><strong>StarTAC:</strong> Первая в мире «раскладушка», ставшая культурным феноменом.</p>
-                <p><strong>RAZR V3 (2004):</strong> Самый стильный телефон в истории. Тонкий алюминий и подсветка клавиатуры покорили миллионы.</p>
-                <h3>Современный ренессанс</h3>
-                <p>После покупки Lenovo, Motorola нашла себя в серии <strong>Edge</strong> и новых гибких <strong>Razr 40/50</strong>. Они предлагают чистый Android и уникальные «Moto-жесты» (фонарик рубящим движением).</p>
-                <div class="best-choice">⭐ <strong>Лучший выбор:</strong> Motorola Razr 50 Ultra.</div>
+            <div class="brand-header motorola-style">
+                <h2>Motorola: Родоначальники Мобильности</h2>
+                <p>История бренда, который создал первый в мире сотовый телефон и научил нас стилю.</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h4>Motorola DynaTAC 8000X (1983)</h4>
+                    <p>Первый в истории коммерческий мобильный телефон. Вес почти 1 кг, зарядка — 10 часов, время разговора — всего 30 минут.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Motorola RAZR V3 (2004)</h4>
+                    <p>Легендарная раскладушка из авиационного алюминия с неоновой подсветкой клавиатуры. Продано более 130 миллионов штук, абсолютная икона стиля 2000-х.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Новое время: Линейки Edge и Razr Ultra</h4>
+                    <p>Пройдя через продажу компании Google, а затем Lenovo, бренд вернулся с крутыми смартфонами серии Edge на чистом Android и складными Razr с огромнымивнешними экранами.</p>
+                    <div class="main-highlight" style="margin-top: 20px; padding: 15px; border-left: 4px solid #00bcd4;">
+    <h4>📟 Выбор Motorola на май 2026:</h4>
+    <ul>
+        <li><strong>Ультимативный:</strong> Razr 60 Ultra (складной топ).</li>
+        <li><strong>Золотая середина:</strong> Edge 50 / 60 Pro.</li>
+        <li><strong>Народный выбор:</strong> Moto G-серия (неубиваемая база).</li>
+    </ul>
+</div>
+                </div>
             </div>
         </section>
 
+        <!-- XIAOMI -->
         <section id="xiaomi-page" class="page-content">
-            <h2>Xiaomi: Технологии для народа</h2>
-            <div class="info-block">
-                <h3>Как захватывали мир</h3>
-                <p><strong>MIUI:</strong> Сначала была прошивка, а уже потом телефон. В 2011 вышел Xiaomi Mi 1, который стоил копейки при топовом железе.</p>
-                <p><strong>Линейки Redmi и Mi:</strong> Redmi 4X и Note 7 стали легендами в СНГ за свою автономность и надежность. Серия Mi Mix показала первые в мире по-настоящему безрамочные экраны.</p>
-                <p><strong>HyperOS:</strong> Современные флагманы (Xiaomi 14/15) — это уже не «дешевый Китай», а серьезные конкуренты с оптикой Leica и зарядкой за 15 минут.</p>
-                <div class="best-choice">⭐ <strong>Лучший выбор:</strong> Xiaomi 14 или Redmi Note 13 Pro.</div>
+            <div class="brand-header xiaomi-style">
+                <h2>Xiaomi: Эволюция Экосистемы</h2>
+                <p>От кастомной прошивки MIUI для гиков до умных флагманов и собственного электромобиля.</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h4>Эра MIUI и Mi 1 (2010–2011)</h4>
+                    <p>Лэй Цзюнь начал с софта. Прошивка MIUI обновлялась каждую пятницу по отзывам фанатов. Первый смартфон Mi 1 предложил топовое железо за половину стоимости конкурентов.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Народные легенды: Redmi 4X, Note 4, Note 7</h4>
+                    <p>Устройства, которые захватили рынок СНГ. Огромные аккумуляторы, прочные корпуса и копеечная цена сделали Redmi синонимом фразы "Топ за свои деньги".</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Современность: HyperOS и премиум-сегмент</h4>
+                    <p>Xiaomi 14 и 15 серий работают на новой модульной HyperOS, оснащаются оптикой от немецкого бренда Leica и заряжаются на мощности до 120 Вт за считанные минуты.</p>
+                    <div class="main-highlight" style="margin-top: 20px; padding: 15px; border-left: 4px solid #ff6700;">
+    <h4>🇨🇳 Выбор Xiaomi на май 2026:</h4>
+    <ul>
+        <li><strong>Ультимативный:</strong> Xiaomi 16 Ultra.</li>
+        <li><strong>Золотая середина:</strong> Xiaomi 16 (обычный).</li>
+        <li><strong>Народный выбор:</strong> Redmi Note 15/16 Pro (короли продаж).</li>
+    </ul>
+</div>
+                </div>
             </div>
         </section>
 
-        <section id="vivo-page" class="page-content">
-            <h2>Vivo: Фото-флагманы из Китая</h2>
-            <div class="info-block">
-                <h3>Инновации в тени</h3>
-                <p>Vivo часто делает то, что другие боятся. Они первыми внедрили <strong>сканер отпечатков под экраном</strong> и выдвижную селфи-камеру в модели NEX.</p>
-                <p><strong>Серия X:</strong> Модели X90, X100 и X200 Pro считаются одними из лучших камерофонов в мире благодаря сотрудничеству с ZEISS и огромным дюймовым сенсорам.</p>
-                <p><strong>Дизайн:</strong> Смартфоны Vivo всегда выделяются цветами и материалами (кожа, градиенты).</p>
-                <div class="best-choice">⭐ <strong>Лучший выбор:</strong> Vivo X100 Pro.</div>
-            </div>
-        </section>
-
+        <!-- NOTHING -->
         <section id="nothing-page" class="page-content">
-            <h2>Nothing: Сквозь прозрачность</h2>
-            <div class="info-block">
-                <p><strong>Nothing Phone (1) и (2):</strong> Карл Пей доказал, что дизайн важнее мегапикселей. Глифы (светодиоды) стали новой фишкой, уведомляющей о звонках и таймерах без экрана.</p>
-                <p><strong>Nothing OS:</strong> Максимально быстрый интерфейс в стиле матричного принтера.</p>
-                <p><strong>Суббренд CMF:</strong> CMF Phone (1) — это конструктор. Хочешь оранжевый корпус? Просто открути винты и поменяй панель. Это возвращение к фану в технике.</p>
-                <div class="best-choice">⭐ <strong>Лучший выбор:</strong> Nothing Phone (2).</div>
+            <div class="brand-header nothing-style">
+                <h2>Nothing: Эстетика Прозрачности</h2>
+                <p>Борьба против скучных черных кирпичей современного мобильного рынка.</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h4>Nothing Phone (1) и Phone (2)</h4>
+                    <p>Основатель Карл Пей сделал ставку на прозрачную заднюю панель и систему интерфейса светодиодов Glyph. Световые полосы могут показывать уровень зарядки, таймер и тип уведомления.</p>
+                </div>
+                <div class="timeline-item main-highlight">
+                    <h4>Суббренд CMF и CMF Phone (1)</h4>
+                    <p>Возвращение веселья и кастомизации. Заднюю крышку смартфона CMF можно полностью снять, открутив декоративные винты, заменить ее на панель другого цвета или прикрутить туда подставку, шнурок или внешний повербанк.</p>
+                    <div class="main-highlight" style="margin-top: 20px; padding: 15px; border-left: 4px solid #7a7a7a;">
+    <h4>✨ Выбор Nothing на май 2026:</h4>
+    <ul>
+        <li><strong>Ультимативный:</strong> Nothing Phone (3).</li>
+        <li><strong>Золотая середина:</strong> Nothing Phone (2).</li>
+        <li><strong>Народный выбор:</strong> CMF Phone 2 (стиль, который доступен каждому).</li>
+    </ul>
+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIVO -->
+        <section id="vivo-page" class="page-content">
+            <div class="brand-header vivo-style">
+                <h2>Vivo: Инновации Инженерии</h2>
+                <p>Бренд, который тихо внедряет технологии, меняющие всю индустрию смартфона.</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <h4>Vivo X20 Plus UD & NEX (2018)</h4>
+                    <p>Первый в мире серийный смартфон со сканером отпечатков пальцев, встроенным прямо под плоскость экрана. Модель NEX избавилась от рамок с помощью выезжающей из корпуса селфи-камеры.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Камерофоны серии X (X100, X200 Pro)</h4>
+                    <p>Благодаря тесному союзу с легендарным немецким брендом оптики ZEISS и установке гигантских дюймовых сенсоров, флагманы Vivo стали признанными лидерами в ночной и портретной съемке.</p>
+                    <div class="main-highlight" style="margin-top: 20px; padding: 15px; border-left: 4px solid #415fff;">
+    <h4>📸 Выбор Vivo на май 2026:</h4>
+    <ul>
+        <li><strong>Ультимативный:</strong> Vivo X200 Pro.</li>
+        <li><strong>Золотая середина:</strong> Vivo X100s / X200 (обычный).</li>
+        <li><strong>Народный выбор:</strong> Vivo Y-серия (дизайн и автономность).</li>
+    </ul>
+</div>
+                </div>
             </div>
         </section>
 
